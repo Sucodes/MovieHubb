@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Rokkitt&display=swap');
+@import "_variables.scss";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container {
+    color: $white;
+    background-color: $black;
+    font-family: "Rokkitt", "Open sans";
+    padding: 0px 50px;
+}
+
+header {
+    
+
+    .navbar {
+        height: 50px;
+        padding-top: 20px;
+        @include flexCenter(row);
+        justify-content: space-between;
+        top: 0px;
+
+        h1 {
+            font-size: 2rem;
+
+            span {
+                color: $red;
+            }
+        }
+
+        .menu {
+            width: 20%;
+            @include flexCenter(row);
+            justify-content: space-between;
+
+            .toggle {
+                @include svg;
+            }
+
+            .navlinks {
+                @include flexCenter(row);
+                @include svg;
+
+                #user {
+                    display: none;
+                }
+
+                #home {
+                    display: none;
+                }
+
+                #search {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.home {
+    margin: 50px 0px;
+    height: 60vh;
+    object-fit: cover;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    // filter: blur(3px);
+    background-position: 50%;
+}
+
+.movie__list {
+    @include flexCenter(column);
+    flex-wrap: wrap;
+    margin: 50px 0px;
+
+    .card {
+        width: 230px;
+        @include flexCenter(column);
+        justify-content: flex-start;
+        text-align: left;
+        margin-bottom: 50px;
+
+        img {
+            width: 100%;
+        }
+
+        .card--details {
+            width: 100%;
+            @include flexCenter(row);
+            justify-content: space-between;
+
+            .card--text {
+                margin-top: 10px;
+
+                h2 {
+                    font-size: 1rem;
+                    font-weight: 400;
+                }
+
+                p {        
+                    font-weight: normal;
+                    font-size: 1rem;
+                }
+            }
+
+            .card--btn {
+                cursor: pointer;
+
+                a {
+                    @include flexCenter(row);
+                    @include svg;
+                }
+            }
+        }
+    }
+}
+
+.movie__details {
+    height: 80vh;
+    @include flexCenter(column);
+
+    .movie__details--text {
+        text-align: justify;
+        margin-top: 50px;
+
+        div {
+            margin: 10px 0px;
+        }
+
+        p {
+            font-size: 0.9rem;
+            font-weight: 100;
+            letter-spacing: 0.8px;
+            line-height: 1.2;
+
+            span {
+                font-weight: 900;
+            }
+        }
+
+        .btn {
+            margin-top: 15px;
+            @include flexCenter(row);
+            justify-content: space-between;
+
+            button {
+                cursor: pointer;
+                padding: 5px 10px;
+                border: none;
+                border-radius: 4px;
+                @include hover;
+
+                a {
+                    text-decoration: none;
+                    color: $black;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    margin-top: 50px;
+    bottom: 0px;
+    width: 100%;
+
+    .icons {
+        @include flexCenter(row);
+        margin: 10px 0px;
+
+        ul {
+            list-style-type: none;
+            display: flex;
+
+            li {
+                margin: 0px 10px;
+                @include svg;
+            }
+        }
+    }
+
+    .foot__note {
+        @include flexCenter(column);
+        padding-bottom: 20px;
+
+        p {
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+    }
+}
+
+
+/******************* Media query styling begins here *********************************/
+
+
+@media (min-width: 768px) {
+
+    header {
+
+        .navbar {
+
+            .menu {
+                width: 30%;
+
+                .toggle {
+                    @include flexCenter(row);
+                }
+
+                .navlinks {
+                    width: 70%;
+
+                    a {
+                        width: 100%;
+                        @include flexCenter(row);
+                        justify-content: space-between;
+
+                        #menu {
+                            display: none;
+                        }
+
+                        #user {
+                            display: block;
+                        }
+
+                        #home {
+                            display: block;
+                        }
+
+                        #search {
+                            display: block;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+    .home {
+        @include flexCenter(row);
+        justify-content: flex-start;
+    }
+
+    .movie__list {
+        @include flexCenter(row);
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .card {
+            width: 300px;
+        }
+    }
+
+    .movie__details {
+        @include flexCenter(row);
+        justify-content: space-around;
+
+        .movie__details--text {
+            width: 50%;
+            margin: 0px;
+        }
+    }
+
+    footer {
+
+        .foot__note {
+            @include flexCenter(row);
+            padding-bottom: 30px;
+        }
+    }
+}

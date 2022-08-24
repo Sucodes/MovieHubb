@@ -1,0 +1,313 @@
+@import url("https://fonts.googleapis.com/css2?family=Rokkitt&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.container {
+  color: white;
+  background-color: black;
+  font-family: "Rokkitt", "Open sans";
+  padding: 0px 50px;
+}
+
+header .navbar {
+  height: 50px;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  top: 0px;
+}
+header .navbar h1 {
+  font-size: 2rem;
+}
+header .navbar h1 span {
+  color: red;
+}
+header .navbar .menu {
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+header .navbar .menu .toggle svg {
+  width: 1.2rem;
+  fill: white;
+  cursor: pointer;
+}
+header .navbar .menu .toggle svg:hover {
+  color: red;
+  transform: scale(1.1);
+  transition: 2s;
+  fill: red;
+}
+header .navbar .menu .navlinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+header .navbar .menu .navlinks svg {
+  width: 1.2rem;
+  fill: white;
+  cursor: pointer;
+}
+header .navbar .menu .navlinks svg:hover {
+  color: red;
+  transform: scale(1.1);
+  transition: 2s;
+  fill: red;
+}
+header .navbar .menu .navlinks #user {
+  display: none;
+}
+header .navbar .menu .navlinks #home {
+  display: none;
+}
+header .navbar .menu .navlinks #search {
+  display: none;
+}
+
+.home {
+  margin: 50px 0px;
+  height: 60vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.movie__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 50px 0px;
+}
+.movie__list .card {
+  width: 230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  margin-bottom: 50px;
+}
+.movie__list .card img {
+  width: 100%;
+}
+.movie__list .card .card--details {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.movie__list .card .card--details .card--text {
+  margin-top: 10px;
+}
+.movie__list .card .card--details .card--text h2 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+.movie__list .card .card--details .card--text p {
+  font-weight: normal;
+  font-size: 1rem;
+}
+.movie__list .card .card--details .card--btn {
+  cursor: pointer;
+}
+.movie__list .card .card--details .card--btn a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.movie__list .card .card--details .card--btn a svg {
+  width: 1.2rem;
+  fill: white;
+  cursor: pointer;
+}
+.movie__list .card .card--details .card--btn a svg:hover {
+  color: red;
+  transform: scale(1.1);
+  transition: 2s;
+  fill: red;
+}
+
+.movie__details {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.movie__details .movie__details--text {
+  text-align: justify;
+  margin-top: 50px;
+}
+.movie__details .movie__details--text div {
+  margin: 10px 0px;
+}
+.movie__details .movie__details--text p {
+  font-size: 0.9rem;
+  font-weight: 100;
+  letter-spacing: 0.8px;
+  line-height: 1.2;
+}
+.movie__details .movie__details--text p span {
+  font-weight: 900;
+}
+.movie__details .movie__details--text .btn {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.movie__details .movie__details--text .btn button {
+  cursor: pointer;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+}
+.movie__details .movie__details--text .btn button:hover {
+  color: red;
+  transform: scale(1.1);
+  transition: 2s;
+  fill: red;
+}
+.movie__details .movie__details--text .btn button a {
+  text-decoration: none;
+  color: black;
+}
+
+footer {
+  margin-top: 50px;
+  bottom: 0px;
+  width: 100%;
+}
+footer .icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0px;
+}
+footer .icons ul {
+  list-style-type: none;
+  display: flex;
+}
+footer .icons ul li {
+  margin: 0px 10px;
+}
+footer .icons ul li svg {
+  width: 1.2rem;
+  fill: white;
+  cursor: pointer;
+}
+footer .icons ul li svg:hover {
+  color: red;
+  transform: scale(1.1);
+  transition: 2s;
+  fill: red;
+}
+footer .foot__note {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+}
+footer .foot__note p {
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+/******************* Media query styling begins here *********************************/
+@media (min-width: 768px) {
+  header .navbar .menu {
+    width: 30%;
+  }
+  header .navbar .menu .toggle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  header .navbar .menu .navlinks {
+    width: 70%;
+  }
+  header .navbar .menu .navlinks a {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header .navbar .menu .navlinks a #menu {
+    display: none;
+  }
+  header .navbar .menu .navlinks a #user {
+    display: block;
+  }
+  header .navbar .menu .navlinks a #home {
+    display: block;
+  }
+  header .navbar .menu .navlinks a #search {
+    display: block;
+  }
+  .home {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .movie__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .movie__list .card {
+    width: 300px;
+  }
+  .movie__details {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .movie__details .movie__details--text {
+    width: 50%;
+    margin: 0px;
+  }
+  footer .foot__note {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+  }
+}/*# sourceMappingURL=styles.css.map */

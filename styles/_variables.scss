@@ -1,0 +1,29 @@
+// colors
+$white: white;
+$black: black;
+$red: red;
+
+@mixin flexCenter($direction) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin svg {
+    svg {
+        width: 1.2rem;
+        fill: $white;
+        cursor: pointer;
+        @include hover;
+    }
+}
+
+@mixin hover {
+    &:hover {
+        color: $red;
+        transform: scale(1.1);
+        transition: 2s;
+        fill: $red;
+    }
+}
