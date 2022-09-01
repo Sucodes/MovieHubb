@@ -14,8 +14,68 @@
     padding: 0px 50px;
 }
 
+.light-mode {
+    background-color: $white;
+    color: $black;
+
+    header {
+        .navbar {
+            .menu {
+                .toggle {
+                    @include svg-light;
+                }
+
+                .navlinks {
+                    a {
+                        @include svg-light;
+                    }
+                }
+            }
+        }
+    }
+
+    #overlay {
+        background-color: $white;
+
+        .overlay--content {
+            ul {
+                a {
+                    li {
+                        color: $black;
+                    }
+                }
+            }
+        }
+
+        .close {
+            @include svg-light;
+        }
+    }
+
+    .movie__list {
+        .card {
+            .card--details {
+                .card--btn {
+                    a {
+                        @include svg-light;
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        .icons {
+            ul {
+                li {
+                    @include svg-light;
+                }
+            }
+        }
+    }
+}
+
 header {
-    
 
     .navbar {
         height: 50px;
@@ -25,6 +85,7 @@ header {
         top: 0px;
 
         h1 {
+            cursor: pointer;
             font-size: 2rem;
 
             span {
@@ -35,29 +96,87 @@ header {
         .menu {
             width: 20%;
             @include flexCenter(row);
-            justify-content: space-between;
+            justify-content: flex-end;
 
             .toggle {
+                margin-right: 50px;
                 @include svg;
+
+                .light {
+                    display: block;
+                }
+
+                .dark {
+                    display: none;
+                }
             }
 
             .navlinks {
                 @include flexCenter(row);
-                @include svg;
 
-                #user {
-                    display: none;
-                }
+                a {
+                    @include flexCenter(row);
+                    @include svg;
 
-                #home {
-                    display: none;
-                }
+                    #user {
+                        display: none;
+                    }
 
-                #search {
-                    display: none;
+                    #home {
+                        display: none;
+                    }
+
+                    #search {
+                        display: none;
+                    }
                 }
             }
         }
+    }
+}
+
+#overlay {
+    background-color: rgba(0, 0, 0, 0.9);
+    height: 100vh;
+    width: 0%;
+    top: 0%;
+    left: 0%;
+    transition: 2s;
+    transform: scaleX(1);
+    position: fixed;
+    z-index: 1;
+    @include flexCenter(column);
+    overflow: hidden;
+
+    .overlay--content {
+        top: 25%;
+
+        ul {
+            margin-bottom: 5rem;
+            list-style-type: none;
+
+            a {
+                text-decoration: none;
+
+                li {
+                    font-size: 1.5rem;
+                    color: $white;
+                    padding-bottom: 1.2rem;
+
+                    &:hover {
+                        @include hover;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    .close {
+        top: 5%;
+        right: 10%;
+        position: absolute;
+        @include svg;
     }
 }
 
@@ -104,7 +223,7 @@ header {
                     font-weight: 400;
                 }
 
-                p {        
+                p {
                     font-weight: normal;
                     font-size: 1rem;
                 }
@@ -123,6 +242,7 @@ header {
 }
 
 .movie__details {
+    margin: 100px 0px;
     height: 80vh;
     @include flexCenter(column);
 
@@ -208,20 +328,19 @@ footer {
         .navbar {
 
             .menu {
-                width: 30%;
 
                 .toggle {
+                    margin: 0px;
                     @include flexCenter(row);
                 }
 
                 .navlinks {
-                    width: 70%;
+                    width: 10rem;
+                    @include flexCenter(row);
+                    justify-content: space-between;
+
 
                     a {
-                        width: 100%;
-                        @include flexCenter(row);
-                        justify-content: space-between;
-
                         #menu {
                             display: none;
                         }

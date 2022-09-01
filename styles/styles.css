@@ -12,6 +12,72 @@
   padding: 0px 50px;
 }
 
+.light-mode {
+  background-color: white;
+  color: black;
+}
+.light-mode header .navbar .menu .toggle svg {
+  width: 1.2rem;
+  fill: black;
+  cursor: pointer;
+}
+.light-mode header .navbar .menu .toggle svg:hover {
+  color: red;
+  transform: scale(1.1);
+  transition: 2s;
+  fill: red;
+}
+.light-mode header .navbar .menu .navlinks a svg {
+  width: 1.2rem;
+  fill: black;
+  cursor: pointer;
+}
+.light-mode header .navbar .menu .navlinks a svg:hover {
+  color: red;
+  transform: scale(1.1);
+  transition: 2s;
+  fill: red;
+}
+.light-mode #overlay {
+  background-color: white;
+}
+.light-mode #overlay .overlay--content ul a li {
+  color: black;
+}
+.light-mode #overlay .close svg {
+  width: 1.2rem;
+  fill: black;
+  cursor: pointer;
+}
+.light-mode #overlay .close svg:hover {
+  color: red;
+  transform: scale(1.1);
+  transition: 2s;
+  fill: red;
+}
+.light-mode .movie__list .card .card--details .card--btn a svg {
+  width: 1.2rem;
+  fill: black;
+  cursor: pointer;
+}
+.light-mode .movie__list .card .card--details .card--btn a svg:hover {
+  color: red;
+  transform: scale(1.1);
+  transition: 2s;
+  fill: red;
+}
+.light-mode footer .icons ul li svg {
+  width: 1.2rem;
+  fill: black;
+  cursor: pointer;
+}
+.light-mode footer .icons ul li svg:hover {
+  color: red;
+  transform: scale(1.1);
+  transition: 2s;
+  fill: red;
+}
+
 header .navbar {
   height: 50px;
   padding-top: 20px;
@@ -23,6 +89,7 @@ header .navbar {
   top: 0px;
 }
 header .navbar h1 {
+  cursor: pointer;
   font-size: 2rem;
 }
 header .navbar h1 span {
@@ -34,7 +101,10 @@ header .navbar .menu {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
+}
+header .navbar .menu .toggle {
+  margin-right: 50px;
 }
 header .navbar .menu .toggle svg {
   width: 1.2rem;
@@ -47,31 +117,100 @@ header .navbar .menu .toggle svg:hover {
   transition: 2s;
   fill: red;
 }
+header .navbar .menu .toggle .light {
+  display: block;
+}
+header .navbar .menu .toggle .dark {
+  display: none;
+}
 header .navbar .menu .navlinks {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-header .navbar .menu .navlinks svg {
+header .navbar .menu .navlinks a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+header .navbar .menu .navlinks a svg {
   width: 1.2rem;
   fill: white;
   cursor: pointer;
 }
-header .navbar .menu .navlinks svg:hover {
+header .navbar .menu .navlinks a svg:hover {
   color: red;
   transform: scale(1.1);
   transition: 2s;
   fill: red;
 }
-header .navbar .menu .navlinks #user {
+header .navbar .menu .navlinks a #user {
   display: none;
 }
-header .navbar .menu .navlinks #home {
+header .navbar .menu .navlinks a #home {
   display: none;
 }
-header .navbar .menu .navlinks #search {
+header .navbar .menu .navlinks a #search {
   display: none;
+}
+
+#overlay {
+  background-color: rgba(0, 0, 0, 0.9);
+  height: 100vh;
+  width: 0%;
+  top: 0%;
+  left: 0%;
+  transition: 2s;
+  transform: scaleX(1);
+  position: fixed;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+#overlay .overlay--content {
+  top: 25%;
+}
+#overlay .overlay--content ul {
+  margin-bottom: 5rem;
+  list-style-type: none;
+}
+#overlay .overlay--content ul a {
+  text-decoration: none;
+}
+#overlay .overlay--content ul a li {
+  font-size: 1.5rem;
+  color: white;
+  padding-bottom: 1.2rem;
+}
+#overlay .overlay--content ul a li:hover {
+  text-decoration: underline;
+}
+#overlay .overlay--content ul a li:hover:hover {
+  color: red;
+  transform: scale(1.1);
+  transition: 2s;
+  fill: red;
+}
+#overlay .close {
+  top: 5%;
+  right: 10%;
+  position: absolute;
+}
+#overlay .close svg {
+  width: 1.2rem;
+  fill: white;
+  cursor: pointer;
+}
+#overlay .close svg:hover {
+  color: red;
+  transform: scale(1.1);
+  transition: 2s;
+  fill: red;
 }
 
 .home {
@@ -151,6 +290,7 @@ header .navbar .menu .navlinks #search {
 }
 
 .movie__details {
+  margin: 100px 0px;
   height: 80vh;
   display: flex;
   flex-direction: column;
@@ -242,20 +382,15 @@ footer .foot__note p {
 
 /******************* Media query styling begins here *********************************/
 @media (min-width: 768px) {
-  header .navbar .menu {
-    width: 30%;
-  }
   header .navbar .menu .toggle {
+    margin: 0px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
   }
   header .navbar .menu .navlinks {
-    width: 70%;
-  }
-  header .navbar .menu .navlinks a {
-    width: 100%;
+    width: 10rem;
     display: flex;
     flex-direction: row;
     justify-content: center;

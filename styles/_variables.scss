@@ -19,6 +19,15 @@ $red: red;
     }
 }
 
+@mixin svg-light {
+    svg {
+        width: 1.2rem;
+        fill: $black;
+        cursor: pointer;
+        @include hover;
+    }
+}
+
 @mixin hover {
     &:hover {
         color: $red;
