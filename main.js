@@ -2,11 +2,18 @@
 const openMenu = document.querySelector("#menu");
 const menuNav = document.querySelector("#overlay");
 const closeMenu = document.querySelector(".close");
+const toggleBtn = document.querySelector(".toggle");
+const homeBtn = document.querySelector("#home");
+const input = document.querySelector("#input");
 const moon = document.querySelector(".dark");
 const sun = document.querySelector(".light");
 const body = document.querySelector(".container");
 const icon = document.querySelectorAll("svg");
+const searchBar = document.querySelector(".search");
+const openSearchBar = document.querySelector("#search");
+const closeSearchBar = document.querySelector(".close__search");
 
+// const searchInput = document.querySelector(".search");
 
 // Make movie API calls
 let movie = {
@@ -116,6 +123,15 @@ let movie = {
     }
   },
 
+  searchMovie: function search() {
+    searchBar.style.width = "100%";
+
+    closeSearchBar.onclick = function close(){
+      searchBar.style.width = "0%";
+    }
+
+
+  }
 }
 
 movie.fetchMovies();
@@ -134,27 +150,29 @@ function open() {
 // Close Navigation bar
 function close() {
   menuNav.style.width = "0%";
+
 }
 
 // Return to index page
-function home() {
+homeBtn.onclick = function home() {
   location.assign("index.html");
 }
 
 
 // Toggle between light and dark modes
-function darkMode() {
-  moon.style.display = "none";
-  sun.style.display = "block";
+toggleBtn.onclick = function (){
   body.style.transition = "0.5s";
   body.classList.toggle("light-mode");
-}
 
-function lightMode() {
-  moon.style.display = "block";
-  sun.style.display = "none";
-  body.style.transition = "0.5s";
-  body.classList.toggle("light-mode");
+  if(sun.style.display == "none") {
+    body.style.transition = "0.5s";
+    sun.style.display = "block";
+    moon.style.display = "none";
+  } else {
+    body.style.transition = "0.5s";
+    sun.style.display = "none";
+    moon.style.display = "block";
+  };
 }
 
 
@@ -167,3 +185,17 @@ ScrollReveal({
 });
 
 ScrollReveal().reveal(".home", {origin: 'left'});
+
+input.addEventListener("keypress", searchingMovie);
+let movieTitle = input.value;
+
+function searchingMovie(movieTitle) {
+  if (event.key === "Enter") {
+      fetch("https://yts.mx/api/v2/list_movies.json?query_term=" + movieTitle)
+    .then((response) => response.json())
+    .then((data) => console.log(data));
+    let title = data.data.movies;
+    console.log(title);
+  }
+  // console.log("hi");
+}

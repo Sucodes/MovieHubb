@@ -38,6 +38,23 @@
   transition: 2s;
   fill: red;
 }
+.light-mode .search {
+  background-color: white;
+}
+.light-mode .search input {
+  border: 1px solid;
+}
+.light-mode .search .close__search svg {
+  width: 1.2rem;
+  fill: black;
+  cursor: pointer;
+}
+.light-mode .search .close__search svg:hover {
+  color: red;
+  transform: scale(1.1);
+  transition: 2s;
+  fill: red;
+}
 .light-mode #overlay {
   background-color: white;
 }
@@ -156,6 +173,43 @@ header .navbar .menu .navlinks a #search {
   display: none;
 }
 
+.search {
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 0%;
+  top: 0%;
+  left: 0%;
+  transition: 2s;
+  transform: scaleX(1);
+  height: 100vh;
+  overflow: hidden;
+  position: fixed;
+  z-index: 2;
+}
+.search input {
+  top: 15%;
+  left: 35%;
+  border: none;
+  border-radius: 4px;
+  padding: 5px;
+  position: relative;
+}
+.search .close__search {
+  top: 5%;
+  right: 10%;
+  position: absolute;
+}
+.search .close__search svg {
+  width: 1.2rem;
+  fill: white;
+  cursor: pointer;
+}
+.search .close__search svg:hover {
+  color: red;
+  transform: scale(1.1);
+  transition: 2s;
+  fill: red;
+}
+
 #overlay {
   background-color: rgba(0, 0, 0, 0.9);
   height: 100vh;
@@ -214,17 +268,12 @@ header .navbar .menu .navlinks a #search {
 }
 
 .home {
-  margin: 50px 0px;
+  margin: 70px 0px;
   height: 60vh;
   -o-object-fit: cover;
      object-fit: cover;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 20px;
   background-repeat: no-repeat;
+  background-image: url(../images/cinema.avif);
   background-position: 50%;
 }
 
@@ -373,11 +422,10 @@ footer .foot__note {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 footer .foot__note p {
   margin-right: 5px;
-  margin-bottom: 5px;
 }
 
 /******************* Media query styling begins here *********************************/
@@ -443,6 +491,5 @@ footer .foot__note p {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding-bottom: 30px;
   }
 }/*# sourceMappingURL=styles.css.map */

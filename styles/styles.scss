@@ -34,6 +34,18 @@
         }
     }
 
+    .search {
+        background-color: $white;
+
+        input {
+            border: 1px solid;
+        }
+
+        .close__search {
+            @include svg-light;
+        }
+    }
+
     #overlay {
         background-color: $white;
 
@@ -135,8 +147,37 @@ header {
     }
 }
 
+.search {
+    background-color: $lightBlack;
+    width: 0%;
+    top: 0%;
+    left: 0%;
+    transition: 2s;
+    transform: scaleX(1);
+    height: 100vh;
+    overflow: hidden;
+    position: fixed;
+    z-index: 2;
+
+    input {
+        top: 15%;
+        left: 35%;
+        border: none;
+        border-radius: 4px;
+        padding: 5px;
+        position: relative;
+    }
+
+    .close__search {
+        top: 5%;
+        right: 10%;
+        position: absolute;
+        @include svg;
+    }
+}
+
 #overlay {
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: $lightBlack;
     height: 100vh;
     width: 0%;
     top: 0%;
@@ -181,16 +222,11 @@ header {
 }
 
 .home {
-    margin: 50px 0px;
+    margin: 70px 0px;
     height: 60vh;
     object-fit: cover;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    border-radius: 20px;
     background-repeat: no-repeat;
-    // filter: blur(3px);
+    background-image: url(../images/cinema.avif);
     background-position: 50%;
 }
 
@@ -308,11 +344,10 @@ footer {
 
     .foot__note {
         @include flexCenter(column);
-        padding-bottom: 20px;
+        padding-bottom: 10px;
 
         p {
             margin-right: 5px;
-            margin-bottom: 5px;
         }
     }
 }
@@ -392,7 +427,6 @@ footer {
 
         .foot__note {
             @include flexCenter(row);
-            padding-bottom: 30px;
         }
     }
 }
