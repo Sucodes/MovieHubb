@@ -85,9 +85,13 @@
     }
 
     .movie__list {
+
         .card {
+
             .card--details {
+
                 .card--btn {
+                    
                     a {
                         @include svg-light;
                     }
@@ -190,15 +194,15 @@ header {
         input {
             border: none;
             border-radius: 4px;
-            padding: 5px;
+            padding: 7px;
         }
     
         #searchBtn {
             border: none;
             border-radius: 4px;
-            margin-left: 20px;
-            width: 2rem;
-            padding: 4px;
+            margin-left: 3px;
+            width: 1.8rem;
+            padding: 5px;
            
             svg {
                 width: 1rem;
@@ -217,7 +221,7 @@ header {
         padding-top: 100px;
         @include flexCenter(column);
         flex-wrap: wrap;
-        margin: 50px 0px;
+        margin: 80px 0px;
 
         .card {
             width: 230px;
@@ -227,6 +231,8 @@ header {
             margin-bottom: 50px;
     
             img {
+                border: none;
+                border-radius: 8px;
                 width: 100%;
             }
     
@@ -308,8 +314,11 @@ header {
 }
 
 .home {
-    margin: 70px 0px;
+    margin-top: 30px;
+    margin-bottom: 70px;
     height: 60vh;
+    border: none;
+    border-radius: 20px;
     object-fit: cover;
     background-repeat: no-repeat;
     background-image: url(../images/cinema.avif);
@@ -324,42 +333,48 @@ header {
     .card {
         width: 230px;
         @include flexCenter(column);
-        justify-content: flex-start;
         text-align: left;
         margin-bottom: 50px;
-
-        img {
+        
+        .img {
             width: 100%;
-        }
+
+            img {
+                border: none;
+                border-radius: 8px; 
+                width: 100%;  
+            }
+        } 
 
         .card--details {
             width: 100%;
             @include flexCenter(row);
             justify-content: space-between;
-
+    
             .card--text {
                 margin-top: 10px;
-
+    
                 h2 {
                     font-size: 1rem;
                     font-weight: 400;
                 }
-
+    
                 p {
                     font-weight: normal;
                     font-size: 1rem;
                 }
             }
-
+    
             .card--btn {
                 cursor: pointer;
-
+    
                 a {
                     @include flexCenter(row);
                     @include svg;
                 }
             }
         }
+    
     }
 }
 
@@ -367,6 +382,13 @@ header {
     margin: 150px 0px;
     height: 80vh;
     @include flexCenter(column);
+
+    .movie__details--img {
+        img {
+            border: none;
+            border-radius: 8px;
+        }
+    }
 
     .movie__details--text {
         text-align: justify;
@@ -525,6 +547,8 @@ footer {
     .home {
         @include flexCenter(row);
         justify-content: flex-start;
+        height: 90vh;
+        background-image: url(../images/karateKid.crdownload);
     }
 
     .search {

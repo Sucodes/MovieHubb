@@ -221,14 +221,14 @@ header .navbar .menu .navlinks a #search {
 .search .input input {
   border: none;
   border-radius: 4px;
-  padding: 5px;
+  padding: 7px;
 }
 .search .input #searchBtn {
   border: none;
   border-radius: 4px;
-  margin-left: 20px;
-  width: 2rem;
-  padding: 4px;
+  margin-left: 3px;
+  width: 1.8rem;
+  padding: 5px;
 }
 .search .input #searchBtn svg {
   width: 1rem;
@@ -256,7 +256,7 @@ header .navbar .menu .navlinks a #search {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin: 50px 0px;
+  margin: 80px 0px;
 }
 .search .results .card {
   width: 230px;
@@ -269,6 +269,8 @@ header .navbar .menu .navlinks a #search {
   margin-bottom: 50px;
 }
 .search .results .card img {
+  border: none;
+  border-radius: 8px;
   width: 100%;
 }
 .search .results .card .card--details {
@@ -369,8 +371,11 @@ header .navbar .menu .navlinks a #search {
 }
 
 .home {
-  margin: 70px 0px;
+  margin-top: 30px;
+  margin-bottom: 70px;
   height: 60vh;
+  border: none;
+  border-radius: 20px;
   -o-object-fit: cover;
      object-fit: cover;
   background-repeat: no-repeat;
@@ -392,11 +397,15 @@ header .navbar .menu .navlinks a #search {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  justify-content: flex-start;
   text-align: left;
   margin-bottom: 50px;
 }
-.movie__list .card img {
+.movie__list .card .img {
+  width: 100%;
+}
+.movie__list .card .img img {
+  border: none;
+  border-radius: 8px;
   width: 100%;
 }
 .movie__list .card .card--details {
@@ -446,6 +455,10 @@ header .navbar .menu .navlinks a #search {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.movie__details .movie__details--img img {
+  border: none;
+  border-radius: 8px;
 }
 .movie__details .movie__details--text {
   text-align: justify;
@@ -591,6 +604,8 @@ footer .foot__note p {
     justify-content: center;
     align-items: center;
     justify-content: flex-start;
+    height: 90vh;
+    background-image: url(../images/karateKid.crdownload);
   }
   .search .results {
     display: flex;
