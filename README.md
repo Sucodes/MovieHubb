@@ -1,6 +1,6 @@
 # Movie Application Project
 
-[MovieHubb](./images/MovieHubb%20(2).png)
+(./images/MovieHubb%20(2).png)
 
 ## Table of Contents
 
