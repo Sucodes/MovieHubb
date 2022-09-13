@@ -15,6 +15,10 @@ This is a Cross-browser Compatible Movie Application that allows users to stream
 - SASS
 - Vanilla JavaScript
 
+## Link
+
+[Click here to view](https://sucodes.github.io/MovieHubb/)
+
 ## Features 
 
 1. Toggle between light and dark themes. 
