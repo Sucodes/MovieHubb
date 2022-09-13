@@ -66,6 +66,9 @@
   transition: 2s;
   fill: red;
 }
+.light-mode .search .results .card {
+  background-color: #ebebeb;
+}
 .light-mode .search .results .card .card--details .card--btn a svg {
   width: 1.2rem;
   fill: black;
@@ -93,6 +96,9 @@
   transform: scale(1.1);
   transition: 2s;
   fill: red;
+}
+.light-mode .movie__list .card {
+  background-color: #ebebeb;
 }
 .light-mode .movie__list .card .card--details .card--btn a svg {
   width: 1.2rem;
@@ -214,11 +220,11 @@ header .navbar .menu .navlinks a #search {
   align-items: center;
   flex-wrap: wrap;
   top: 10%;
-  left: 25%;
-  width: 300px;
+  width: 100%;
   position: relative;
 }
 .search .input input {
+  width: 40%;
   border: none;
   border-radius: 4px;
   padding: 7px;
@@ -226,8 +232,8 @@ header .navbar .menu .navlinks a #search {
 .search .input #searchBtn {
   border: none;
   border-radius: 4px;
-  margin-left: 3px;
-  width: 1.8rem;
+  margin-left: 5px;
+  width: 2rem;
   padding: 5px;
 }
 .search .input #searchBtn svg {
@@ -259,7 +265,7 @@ header .navbar .menu .navlinks a #search {
   margin: 80px 0px;
 }
 .search .results .card {
-  width: 230px;
+  width: 250px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -267,6 +273,10 @@ header .navbar .menu .navlinks a #search {
   justify-content: flex-start;
   text-align: left;
   margin-bottom: 50px;
+  border: none;
+  border-radius: 8px;
+  background-color: #1a1818;
+  padding: 15px;
 }
 .search .results .card img {
   border: none;
@@ -392,13 +402,17 @@ header .navbar .menu .navlinks a #search {
   margin: 50px 0px;
 }
 .movie__list .card {
-  width: 230px;
+  width: 250px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: left;
   margin-bottom: 50px;
+  border: none;
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #1a1818;
 }
 .movie__list .card .img {
   width: 100%;
@@ -420,10 +434,12 @@ header .navbar .menu .navlinks a #search {
   margin-top: 10px;
 }
 .movie__list .card .card--details .card--text h2 {
+  margin-bottom: 3px;
   font-size: 1rem;
   font-weight: 400;
 }
 .movie__list .card .card--details .card--text p {
+  margin-top: 2px;
   font-weight: normal;
   font-size: 1rem;
 }
@@ -624,6 +640,7 @@ footer .foot__note p {
   }
   .movie__list .card {
     width: 300px;
+    padding: 15px 20px;
   }
   .movie__details {
     display: flex;

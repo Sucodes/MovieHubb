@@ -54,9 +54,14 @@
         }
 
         .results {
+
             .card {
+                background-color: $backgroundColor-light;
+
                 .card--details {
+
                     .card--btn {
+
                         a {
                             @include svg-light;
                         }
@@ -87,6 +92,7 @@
     .movie__list {
 
         .card {
+            background-color: $backgroundColor-light;
 
             .card--details {
 
@@ -187,11 +193,11 @@ header {
         @include flexCenter(row);
         flex-wrap: wrap;
         top: 10%;
-        left: 25%;
-        width: 300px;
+        width: 100%;
         position: relative;
 
         input {
+            width: 40%;
             border: none;
             border-radius: 4px;
             padding: 7px;
@@ -200,8 +206,8 @@ header {
         #searchBtn {
             border: none;
             border-radius: 4px;
-            margin-left: 3px;
-            width: 1.8rem;
+            margin-left: 5px;
+            width: 2rem;
             padding: 5px;
            
             svg {
@@ -224,11 +230,15 @@ header {
         margin: 80px 0px;
 
         .card {
-            width: 230px;
+            width: 250px;
             @include flexCenter(column);
             justify-content: flex-start;
             text-align: left;
             margin-bottom: 50px;
+            border: none;
+            border-radius: 8px;
+            background-color: $backgroundColor;
+            padding: 15px;
     
             img {
                 border: none;
@@ -331,10 +341,14 @@ header {
     margin: 50px 0px;
 
     .card {
-        width: 230px;
+        width: 250px;
         @include flexCenter(column);
         text-align: left;
         margin-bottom: 50px;
+        border: none;
+        border-radius: 8px;
+        padding: 15px;
+        background-color: $backgroundColor;
         
         .img {
             width: 100%;
@@ -355,11 +369,13 @@ header {
                 margin-top: 10px;
     
                 h2 {
+                    margin-bottom: 3px;
                     font-size: 1rem;
                     font-weight: 400;
                 }
     
                 p {
+                    margin-top: 2px;
                     font-weight: normal;
                     font-size: 1rem;
                 }
@@ -565,6 +581,7 @@ footer {
 
         .card {
             width: 300px;
+            padding: 15px 20px;
         }
     }
 

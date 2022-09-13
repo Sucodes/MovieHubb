@@ -3,6 +3,8 @@ $white: white;
 $black: black;
 $red: red;
 $lightBlack: rgba(0, 0, 0, 0.9);
+$backgroundColor: #1a1818;
+$backgroundColor-light: #ebebeb;
 
 @mixin flexCenter($direction) {
     display: flex;

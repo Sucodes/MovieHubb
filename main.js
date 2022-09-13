@@ -13,6 +13,8 @@ const searchBar = document.querySelector(".search");
 const searchBtn = document.querySelector("#searchBtn");
 const openSearchBar = document.querySelector("#search");
 const closeSearchBar = document.querySelector(".close__search");
+const searchResult = document.querySelector(".results");
+const movieList = document.querySelector(".movie__list");
 
 
 // Make movie API calls
@@ -50,7 +52,6 @@ let movie = {
         }
         displayMovie();
       });
-      const movieList = document.querySelector(".movie__list");
       movieList.innerHTML = list;
     } catch (err) {
       console.log("Err", err);
@@ -146,10 +147,10 @@ let movie = {
             </div>
           `;
         });
-        const movieee = document.querySelector(".results");
-        movieee.innerHTML = list;
+        searchResult.innerHTML = list;
       } catch (err) {
-        console.log("Oops, something went wrong", err);
+        console.log("Err", err);
+        searchResult.innerHTML = "Oops, something went wrong." + "<br>" + "Please try again";
         return { errMsg: err };
       }
     });
